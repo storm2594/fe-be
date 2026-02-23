@@ -1,7 +1,6 @@
 module.exports = {
-//  HOST: "100.27.231.130",
-  HOST: "100.27.231.130",
-  USER: "test",
-  PASSWORD: "test",
-  DB: "testdb"
+  HOST: process.env.DB_HOST || "localhost",
+  USER: process.env.DB_USER || "root",
+  PASSWORD: process.env.DB_PASSWORD || "",
+  DB: process.env.DB_NAME || "testdb"
 };
